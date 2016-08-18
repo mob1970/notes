@@ -1,0 +1,73 @@
+Movement
+	Ctrl-W hjkl -> move through different windows.
+	Ctrl-W _  -> Maximize current window.
+	Ctrl-W =  -> Restore all windows to "normal" size.
+	gg -> Go to the top of the file.
+	G -> Go to the bottom of thw file.
+
+	H -> Move to the top of the screen.
+	M -> Move the the middle of the screen.
+	L -> Move to the bottom of the screen.
+
+	Ctrl-R r -> Rotates windows (first with second, second with third and so on).
+	#n-G -> Go to line number #n.
+
+Splitting
+	Ctrl-W t Ctrl-W K -> To change two vertically split windows to horizonally split
+	Ctrl-W t Ctrl-W H -> Horizontally to vertically:
+
+Completion
+	Ctrl-P -> autocomplete 
+	Ctrl-N -> autocomplete down
+
+	Ctrl-B -> Paging Down
+	Ctrl-F -> Paging Up
+
+Rails commands
+	:Emodel model_name -> Goes to the model named model_name
+	:A -> Goes to the spec of the opened file.
+	gf -> Goes to the class the cursor is on.
+	:EV instead of :E opens what you want in a new vertical split.
+	:ET instead of :E opens what you want in a new vertical tab.
+
+vimrc
+
+Remap window movement from Ctrl-w + hjkl to Ctrl + hjkl
+	knoremap <C-J> <C-W><C-J>
+	nnoremap <C-K> <C-W><C-K>
+	nnoremap <C-L> <C-W><C-L>
+	nnoremap <C-H> <C-W><C-H>
+
+Synchronize vertical scroll
+  :set scrollbind -> enable
+  :set noscrollbind -> disable
+
+Show line numbers
+  :set nu -> show line numbers
+  :set nonu -> no show line numbers
+
+Sort and remove duplicated lines 
+  :sort u
+
+Resize split width
+  :vertical resize +5
+
+Resize split height
+  :res +5
+
+Copy & Paste between instances
+  copy -> Mark and "+y
+  paste -> "+p
+
+Mark places to go back  (http://vim.wikia.com/wiki/Using_marks)
+  ma -> Mark with 'a' a place.
+  'a -> Go back to 'a' place.
+
+Convert text from ascii to hexadecimal
+  :% ! xxd
+
+Convert text from hexadecimal to ascii
+  :% ! xxd -r
+
+Replace '=>' by ':'
+  :%s/:\([^=,'"]*\) =>/\1:/gc

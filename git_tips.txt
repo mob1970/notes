@@ -1,0 +1,51 @@
+git diff file_name -> shows changes made in file_name
+git branch branch_name -> creates a new branch
+git checkout branch_name -> changes current branch to branch_name
+git stash -> Takes out changes from staging area in a different area
+git stash list -> lists branches stashed
+git stash apply modification_name -> get back modifications to staging area
+git stash drop modification_name -> removes modifications from stash area
+
+
+git branch -va -> Shows local and remote branches' last commit
+git fetch origin -> gets changes log contained in the repository
+git log origin/master -> Shows master's log
+git reset --hard HEAD -> Discards all non-committed changes in local repository
+git revert commit_id -> Reverts commit referenced
+git reset --hard commit_id -> 
+git format-patch -1 hash -> Build a patch from a commit.
+git reset filename -> untrack file after doing git add
+git cherry-pick <first-SHA1> <second-SHA1> <etc.> -> Apply some commits to a different branch from a remote.
+git branch -m new_name -> Renames the current branch
+
+REBASE API
+=========
+
+  git status
+  git fetch sage
+  git rebase sage/api
+  git status
+  resolve conflicts
+  git add files_modified
+  git status
+  git rebase --continue
+  git status
+  resolve conflicts
+  git add files_modified
+  git status
+  git rebase --continue
+  git status
+  git push miquel api --force
+
+TOM's TOP 5
+===========
+
+1) git reflog (saves my ass so many times!)
+2) git rebase -i (lets you do some cool stuff with history)
+3) git add -i (lets you stage parts of a file, instead of the whole file)
+4) git bisect (if you have a bug and you don’t know which commit introduced it, you can use a `good` commit, and a `bad` commit, and it automatically does a binary search between them)
+5) git cherry-pick (pick a specific commit from any branch, and put it on your current)
+
+and a bonus:
+
+6) git config --global help.autocorrect 5 (not a command, but configuration… automatically runs the correct command if you spell it wrong)
